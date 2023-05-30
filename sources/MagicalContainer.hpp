@@ -87,11 +87,11 @@ namespace ariel{
                     end.curr_index = container.size();
                     return end;
                 }
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
                     int& operator*() const {
                         return container.get_vector()[static_cast<vector<int>::size_type>(curr_index)];
                     }
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
 
                     //Destructor
                     ~AscendingIterator() = default;
@@ -120,7 +120,6 @@ namespace ariel{
 
                         return *this;
                     }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                  
          
                     AscendingIterator operator++(){
@@ -136,9 +135,7 @@ namespace ariel{
                     bool operator!=(const AscendingIterator& other_iterator) const {
                         return !(curr_index == other_iterator.curr_index);
                     }
- 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             };
 
@@ -192,7 +189,7 @@ namespace ariel{
 
 //Copy constructor
                 PrimeIterator(const PrimeIterator& other_container) : container(other_container.container){} //Copy constructor
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
                 int& operator*() const {
                     return container.get_vector()[static_cast<vector<int>::size_type>(curr_index)];
                 }
@@ -211,7 +208,7 @@ namespace ariel{
                 bool operator!=(const PrimeIterator& other) const{
                     return !(curr_index == other.curr_index);
                 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
                  // Default destructor
@@ -286,7 +283,7 @@ namespace ariel{
                     return end;         
                 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
             int& operator*() const {
                 return container.get_vector()[static_cast<vector<int>::size_type>(curr_index)];
             }
@@ -301,7 +298,7 @@ namespace ariel{
                 return curr_index == other.curr_index;
             }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
             ~SideCrossIterator() = default;
 
                 // Copy constructor
